@@ -3,6 +3,10 @@ import Container from "@mui/material/Container";
 import { Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import QuiltedImageList from "../components/Image";
+import CustomizedAccordions from "../components/Accordion";
+import Paper from "@mui/material/Paper";
+import { BottomNavigation } from "@mui/material";
+import BasicModal from "../components/Modal";
 
 const Tour = () => {
   return (
@@ -34,6 +38,21 @@ const Tour = () => {
           Sausalito Half-Day Tour (Return by Bus or Ferry from Sausalito)
         </Typography>
       </Box>
+
+      <Box>
+        <Typography variant="h6" component="h2" marginTop={3} marginBottom={2}>
+          Frequently Asked Questions
+        </Typography>{" "}
+        <CustomizedAccordions />
+      </Box>
+      <Paper
+        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+        elevation={3}
+      >
+        <BottomNavigation>
+          <BasicModal />
+        </BottomNavigation>
+      </Paper>
     </Container>
   );
 };
