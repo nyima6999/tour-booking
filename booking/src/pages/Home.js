@@ -1,9 +1,11 @@
 import TourCard from "../components/TourCard";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 
 import cities from "../data.json";
 import { Typography } from "@mui/material";
+import StaticDateRangePickerDemo from "../components/Date";
 
 const Home = () => {
   return (
@@ -27,6 +29,9 @@ const Home = () => {
             </Grid>
           </>
         ))}
+        <Box>
+          <StaticDateRangePickerDemo />
+        </Box>
       </Container>
     </div>
   );
